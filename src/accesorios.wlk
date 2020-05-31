@@ -6,7 +6,7 @@ object farolito {
 
 class Canasto {
 	var property volumen
-	var property tieneLuz = false
+	const property tieneLuz = false
 	method peso(){ return volumen / 10}
 	method carga(){ return volumen * 2}
 }
@@ -14,7 +14,14 @@ class Canasto {
 class MorralDeBici {
 	var property largo
 	var property ojoDeGato
-	var property peso = 1.2
+	const property peso = 1.2
 	method carga(){ return largo / 3}
 	method tieneLuz(){ return ojoDeGato }
 }
+
+/*
+ ------------- 5 ---------------
+Habria que  agregar nuevos objetos que entiendan los mismos mensajes que los creados anteriormente asi podemos
+mantener el polimorfismo.
+*------------- 5 ---------------
+ */
