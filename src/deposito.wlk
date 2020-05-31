@@ -8,10 +8,9 @@ class Deposito {
 	method tieneBiciQueCarga(cuanto){return bicicletas.any({bici=>bici.carga()>cuanto})}
 	method marcaMasRapida(){return bicicletas.max({bici=>bici.velocidadCrucero()}).marca()}
 	method cargaBicisLargas(){return bicicletas.filter({bici=>bici.largo()>170}).sum({bici=>bici.carga()})}
-	method bicisSinAccesorios(){return bicicletas.filter({bici=>bici.accesorios().isEmpty()})}
+	method bicisSinAccesorios(){return bicicletas.filter({bici=>bici.accesorios().isEmpty()}).size()}
 	method biciCompanera(bicicleta){
 		return bicicletas.filter({bici=>bici.marca() == bicicleta.marca() and (bici.largo()-bicicleta.largo()).between(-11,11) 
 			and (bici != bicicleta)})
 	}
-	method hayCompaneras(){return bicicletas.any({bici=>bici})}
 }
