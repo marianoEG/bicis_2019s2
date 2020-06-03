@@ -10,7 +10,7 @@ class Deposito {
 	method cargaBicisLargas(){return bicicletas.filter({bici=>bici.largo()>170}).sum({bici=>bici.carga()})}
 	method bicisSinAccesorios(){return bicicletas.filter({bici=>bici.accesorios().isEmpty()}).size()}
 	method biciCompanera(bicicleta){
-		return bicicletas.filter({bici=>bici.marca() == bicicleta.marca() and (bici.largo()-bicicleta.largo()).between(-11,11) 
+		return bicicletas.filter({bici=>bici.marca() == bicicleta.marca() and (bici.largo()-bicicleta.largo()).between(-10,10) 
 			and (bici != bicicleta)})
 	}
 }
